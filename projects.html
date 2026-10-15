@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Projects · Aadesh Deshmukh</title>
+<meta name="description" content="Projects by Aadesh Deshmukh: software and AI, from hackathon builds to research.">
+<link rel="icon" href="assets/mini.webp" type="image/webp">
+<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css?v=8">
+<script src="js/data.js?v=8" defer></script>
+<script src="js/site.js?v=8" defer></script>
+</head>
+<body data-page="projects">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></symbol>
+  <symbol id="ptr" viewBox="0 0 32 32"><path d="M5 3v21.5l5.8-5.4 4 8.6 4.2-1.9-4-8.4 7.9-.6z"/></symbol>
+</svg>
+
+<header class="navbar">
+  <ul class="nav" id="nav">
+    <span class="pill" aria-hidden="true"></span>
+    <li><a href="index.html#home" data-sec="home" data-cursor="home">Home</a></li>
+    <li><a href="index.html#about" data-sec="about" data-cursor="hi">About<span class="me"> Me</span></a></li>
+    <li><a href="projects.html" data-sec="projects" data-cursor="work">Projects</a></li>
+    <li><a href="resume.html" data-sec="resume" data-cursor="cv">Resume</a></li>
+  </ul>
+  <button class="mode" id="theme" type="button" aria-label="Switch light or dark theme" data-cursor="flip"><span></span></button>
+</header>
+
+<main>
+  <section class="sec page-top wrap">
+    <a class="back" href="index.html#projects" data-cursor="back">&larr; back home</a>
+    <h1 class="head rv">the <b>gallery</b>
+      <span class="mini"><img src="assets/mini.webp" alt=""></span>
+    </h1>
+    <p class="lede">Everything I've built so far, across software and AI: hackathon builds, research, and things I made to learn something new.</p>
+    <div class="cards gallery" id="cards"></div>
+  </section>
+
+  <section class="contact wrap">
+    <div class="foot"><span>Aadesh Deshmukh &middot; Pune, India</span><a data-email="text" href="mailto:aadeshmukh236@gmail.com" data-cursor="copy + mail">aadeshmukh236@gmail.com</a></div>
+  </section>
+</main>
+
+<div id="fx" aria-hidden="true">
+  <div id="ring"><span id="ringTxt"></span></div>
+  <div id="cur"><svg viewBox="0 0 32 32"><use class="sh" href="#ptr" x="2.2" y="2.2"/><use class="ar" href="#ptr"/></svg></div>
+</div>
+
+</body>
+</html>

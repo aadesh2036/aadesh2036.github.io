@@ -6,3 +6,10 @@
 Thumbs.db
 .vscode/
 .idea/
+
+# Source material kept locally, not published
+# (tailored resume PDF, original photo, original cover art — the site uses processed copies in assets/)
+*.pdf
+WhatsApp Image *.jpeg
+AquaAgent.png
+BetweenSessions_*.png

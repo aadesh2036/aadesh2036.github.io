@@ -4,29 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Aadesh Deshmukh</title>
-<meta name="description" content="Aadesh Deshmukh — B.Tech CS (Data Science) at VIT Pune, working on computer vision and machine learning research.">
+<meta name="description" content="Aadesh Deshmukh — Computer Science student at VIT Pune building software and AI.">
 <link rel="icon" href="assets/mini.webp" type="image/webp">
+<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(_){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/main.js" defer></script>
+<link rel="stylesheet" href="css/style.css?v=8">
+<script src="js/data.js?v=8" defer></script>
+<script src="js/site.js?v=8" defer></script>
 </head>
-<body>
+<body data-page="home">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="star" viewBox="0 0 24 24"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></symbol>
   <symbol id="ptr" viewBox="0 0 32 32"><path d="M5 3v21.5l5.8-5.4 4 8.6 4.2-1.9-4-8.4 7.9-.6z"/></symbol>
 </svg>
 
-
 <header class="navbar">
   <ul class="nav" id="nav">
     <span class="pill" aria-hidden="true"></span>
-    <li><a href="#home" data-cursor="home">Home</a></li>
-    <li><a href="#about" data-cursor="hi">About<span class="me"> Me</span></a></li>
-    <li><a href="#projects" data-cursor="work">Projects</a></li>
-    <li><a href="#resume" data-cursor="cv">Resume</a></li>
+    <li><a href="#home" data-sec="home" data-cursor="home">Home</a></li>
+    <li><a href="#about" data-sec="about" data-cursor="hi">About<span class="me"> Me</span></a></li>
+    <li><a href="#projects" data-sec="projects" data-cursor="work">Projects</a></li>
+    <li><a href="resume.html" data-sec="resume" data-cursor="cv">Resume</a></li>
   </ul>
   <button class="mode" id="theme" type="button" aria-label="Switch light or dark theme" data-cursor="flip"><span></span></button>
 </header>
@@ -37,10 +38,9 @@
     <div class="hero-grid">
       <div class="stage" id="stage" data-cursor="wave again" role="button" tabindex="0" aria-label="Play the wave again">
         <span class="bubble" id="bubble" aria-hidden="true">hi!</span>
-        <!-- HERO VIDEO: assets/hero-wave.webm with an mp4 fallback -->
-        <video id="heroClip" muted loop playsinline autoplay preload="auto" poster="assets/hero-poster.webp" aria-label="Aadesh's character waving hello">
+        <!-- Transparent WebM; on Safari site.js swaps in a WebGL canvas playing hero-wave-stacked.mp4 -->
+        <video id="heroClip" class="char" muted loop playsinline autoplay preload="auto" poster="assets/hero-poster.webp" data-stacked="assets/hero-wave-stacked.mp4" aria-label="Aadesh's character waving hello">
           <source src="assets/hero-wave.webm" type="video/webm">
-          <source src="assets/hero-wave.mp4" type="video/mp4">
         </video>
       </div>
       <div>
@@ -48,7 +48,7 @@
           <span class="hello">Hello there <span class="dots" aria-hidden="true"><b>.</b><b>.</b><b>.</b></span></span>
           <span class="hello iam" aria-label="I am Aadesh"><span class="pre" aria-hidden="true">I am</span><span id="who" aria-hidden="true"></span></span>
         </h1>
-        <p class="role">B.Tech CS (Data Science) &middot; VIT Pune &middot; machine learning and research</p>
+        <p class="role">Dev + AI &middot; B.Tech Computer Science &middot; VIT Pune</p>
         <a class="peek" href="#projects" data-cursor="go">
           <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#ptr" fill="currentColor"/></svg>
           <span>peek at my work</span>
@@ -77,18 +77,20 @@
 
       <div class="about-copy rv" id="aboutCopy">
         <p class="eyebrow">About me</p>
-        <h2 class="statement">I build computer-vision models that notice what people miss, from <span class="hl">cracked roads</span> to <span class="hl">sick soybean leaves</span>.</h2>
-        <p class="body">I'm a third-year B.Tech Computer Science (Data Science) student at Vishwakarma Institute of Technology, Pune. Most of my time goes into machine learning research: drone imagery for road inspection, plant disease detection, and route planning for farm logistics. Outside the lab I build at hackathons and keep the projects that hold up.</p>
+        <h2 class="statement">I'm curious about how things work, so I learn by <span class="hl">building software</span> and <span class="hl">teaching machines</span>.</h2>
+        <p class="body">I'm a third-year Computer Science student at Vishwakarma Institute of Technology, Pune. My degree says Data Science, but my curiosity doesn't stay in one lane. What pulls me most is core software engineering: how systems are designed, built, and shipped so they keep working. Alongside that I go deep on AI, which for me covers everything from classic machine learning to computer vision and deep learning.</p>
+        <p class="body">I pick up new things by making something real with them: a React app at a hackathon, a routing engine for farm logistics, a drone-imagery model that spots road damage. If a tool is new and a little hard, that's usually the one I want to try next.</p>
         <dl class="facts">
-          <div><dt>Studying</dt><dd>B.Tech CS (Data Science)</dd></div>
+          <div><dt>Studying</dt><dd>B.Tech Computer Science</dd></div>
           <div><dt>Graduating</dt><dd>2028, VIT Pune</dd></div>
-          <div><dt>Focus</dt><dd>Computer vision, agri-tech ML</dd></div>
+          <div><dt>Focus</dt><dd>Dev + AI</dd></div>
           <div><dt>Currently</dt><dd><i class="live" aria-hidden="true"></i>IRIS, road-defect detection</dd></div>
         </dl>
         <div class="links">
-          <a class="btn" href="https://github.com/aadesh2036" target="_blank" rel="noopener" data-cursor="github">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/aadesh-deshmukh-988a01330" target="_blank" rel="noopener" data-cursor="linkedin">LinkedIn</a>
-          <a class="btn solid" href="#resume" data-cursor="cv" id="toResume">Read my resume</a>
+          <a class="btn" data-link="github" href="https://github.com/aadesh2036" target="_blank" rel="noopener" data-cursor="github">GitHub</a>
+          <a class="btn" data-link="linkedin" href="https://www.linkedin.com/in/aadesh-deshmukh-988a01330" target="_blank" rel="noopener" data-cursor="linkedin">LinkedIn</a>
+          <a class="btn" data-email href="mailto:aadeshmukh236@gmail.com" data-cursor="copy + mail">Email</a>
+          <a class="btn solid" href="resume.html" data-cursor="cv">Read my resume</a>
         </div>
       </div>
     </div>
@@ -100,98 +102,15 @@
       <span class="mini"><img src="assets/mini.webp" alt=""></span>
     </h2>
     <div class="cards" id="cards"></div>
-    <div class="drawer" id="drawer"><div><div class="cards" id="cardsMore"></div></div></div>
-  </section>
-
-  <!-- RESUME -->
-  <section class="sec wrap" id="resume">
-    <div class="res-top">
-      <div>
-        <p class="eyebrow">Curriculum vitae</p>
-        <h2 class="head">my <b>resume</b></h2>
-      </div>
-      <div class="res-actions">
-        <span class="stamp">Updated October 2026</span>
-        <a class="btn solid" id="pdf" href="#" target="_blank" rel="noopener" data-cursor="pdf" hidden>Download PDF</a>
-      </div>
-    </div>
-
-    <article class="sheet rv" id="sheet">
-      <div class="rail" aria-hidden="true"><span></span></div>
-
-      <section class="block">
-        <h3>Education</h3>
-        <ol class="items">
-          <li class="item"><span class="when">2024 &ndash; 2028</span><div>
-            <h4>B.Tech, Computer Science (Data Science)</h4>
-            <p class="where">Vishwakarma Institute of Technology, Pune</p>
-            <span class="metric">CGPA 9.29 / 10</span></div></li>
-          <li class="item"><span class="when">First year</span><div>
-            <h4>Minor degree in Machine Learning</h4>
-            <p class="where">IIT Guwahati</p></div></li>
-          <li class="item"><span class="when">2024</span><div>
-            <h4>HSC, Science</h4>
-            <p class="where">Saraswati Vidyalaya &amp; Junior College, Arjuni Morgaon</p>
-            <span class="metric">97.5%</span></div></li>
-        </ol>
-      </section>
-
-      <section class="block">
-        <h3>Research</h3>
-        <ol class="items">
-          <li class="item"><span class="when">Ongoing</span><div>
-            <h4>IRIS: Intelligent Road Inspection System</h4>
-            <p class="desc">UAV-based road defect detection with YOLOv11s on a fused Indian road-damage dataset of about 51K images across 5 defect classes. Includes a repair-prioritisation module that combines IRC severity grading with knapsack optimisation to rank repairs by cost.</p>
-            <span class="metric">mAP@50 0.623</span></div></li>
-          <li class="item"><span class="when">Patent filed</span><div>
-            <h4>AgriPhenotyper</h4>
-            <p class="desc">Hybrid CNN and Transformer model for plant disease classification, using SLIC superpixel tokens on a ResNet18 / EfficientNet-B2 backbone, with transfer learning and domain adaptation across datasets.</p></div></li>
-        </ol>
-      </section>
-
-      <section class="block">
-        <h3>Projects</h3>
-        <ol class="items">
-          <li class="item"><span class="when">2026</span><div>
-            <h4><a href="https://github.com/aadesh2036/Between_Sessions" target="_blank" rel="noopener" data-cursor="repo">Between Sessions</a></h4>
-            <p class="desc">Built for the WeMakeDevs First Commit hackathon.</p>
-            <span class="metric">Scored 28 / 30</span></div></li>
-          <li class="item"><span class="when">2026</span><div>
-            <h4>KrishiFlow</h4>
-            <p class="desc">AI logistics platform for farmers: capacitated vehicle routing with a cheapest-insertion heuristic, LSTM and LightGBM price prediction, and a trilingual React interface. Smart Kopargaon Hackathon 2026 grand finalist.</p></div></li>
-          <li class="item"><span class="when">Hackathon</span><div>
-            <h4>ArogyaScript</h4>
-            <p class="desc">Prescription intelligence pipeline using YOLOv8 and OCR to turn prescription images into structured records, feeding a risk-scoring engine and an analytics dashboard.</p></div></li>
-        </ol>
-      </section>
-
-      <section class="block">
-        <h3>Leadership</h3>
-        <ol class="items">
-          <li class="item"><span class="when">TEDx</span><div>
-            <h4>Creatives &amp; Production Head</h4>
-            <p class="where">TEDxVITPune</p></div></li>
-        </ol>
-      </section>
-
-      <section class="block">
-        <h3>Skills</h3>
-        <div class="items">
-          <div class="skillrow"><span class="when">Languages</span><ul class="chips"><li>Python</li><li>C++</li><li>JavaScript</li></ul></div>
-          <div class="skillrow"><span class="when">ML / CV</span><ul class="chips"><li>YOLOv8 / v11</li><li>CNNs</li><li>Transformers</li><li>Grad-CAM</li><li>Albumentations</li><li>LSTM</li><li>LightGBM</li></ul></div>
-          <div class="skillrow"><span class="when">Build</span><ul class="chips"><li>React</li><li>Git</li><li>Kaggle</li><li>Open3D</li><li>Blender (bpy)</li></ul></div>
-        </div>
-      </section>
-    </article>
   </section>
 
   <!-- CONTACT -->
   <section class="contact wrap" id="contact">
     <h2 class="rv">say <b>hi</b> ...</h2>
     <div class="mail">
-      <code id="mail">aadesh.deshmukh24@vit.edu</code>
-      <button class="btn" id="copy" type="button" data-cursor="copy">Copy email</button>
+      <a class="mail-addr" data-email="text" href="mailto:aadeshmukh236@gmail.com" data-cursor="copy + mail">aadeshmukh236@gmail.com</a>
     </div>
+    <p class="mail-note">Click to copy it and open your mail app.</p>
     <div class="foot"><span>Aadesh Deshmukh &middot; Pune, India</span><span>Designed around a waving cartoon of me</span></div>
   </section>
 </main>

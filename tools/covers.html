@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project covers</title>
+<!--
+  Source for the project cover images in assets/covers/.
+  Every cover shares one layout (label pill, two-tone title, tagline, tech chips, illustration, footer)
+  and swaps in its project's own theme. Open covers.html?p=<id> at 1200x900 to view one;
+  tools/render-covers.sh screenshots each into assets/covers/<id>.webp.
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0; background:#888}
+.cover{
+  position:relative; width:1200px; height:900px; overflow:hidden; margin:0 auto 40px;
+  background:var(--bg); color:var(--ink); font-family:"Instrument Sans",system-ui,sans-serif;
+}
+body.one .cover{margin:0}
+body.one .cover:not(.on){display:none}
+.cover .grid{position:absolute; inset:0; pointer-events:none}
+.label{
+  position:absolute; left:64px; top:60px; display:inline-flex; align-items:center; gap:14px;
+  padding:12px 24px; border-radius:999px; background:var(--soft); color:var(--accent);
+  font:500 22px/1 "DM Mono",monospace; letter-spacing:.14em; text-transform:uppercase;
+}
+.label::before{content:""; width:12px; height:12px; border-radius:50%; background:var(--dot,var(--accent))}
+h1{
+  position:absolute; left:58px; top:118px; margin:0; white-space:nowrap;
+  font:750 140px/1 "Bricolage Grotesque",sans-serif; font-stretch:92%; letter-spacing:-.025em;
+}
+h1 b{color:var(--accent); font-weight:800}
+.tag{
+  position:absolute; left:64px; top:300px; width:560px; margin:0;
+  font:400 40px/1.18 "Bricolage Grotesque",sans-serif; letter-spacing:-.015em; color:var(--ink-soft);
+}
+.chips{position:absolute; left:64px; bottom:150px; display:flex; flex-wrap:wrap; gap:12px; width:500px; margin:0; padding:0; list-style:none}
+.chips li{padding:10px 20px; border-radius:999px; border:2px solid var(--line); font:500 21px/1 "DM Mono",monospace; color:var(--ink)}
+.art{position:absolute; right:30px; bottom:84px; width:600px; height:480px}
+.foot{
+  position:absolute; left:64px; right:64px; bottom:48px; padding-top:20px; border-top:2px solid var(--line);
+  display:flex; justify-content:space-between; font:500 19px/1 "DM Mono",monospace; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft);
+}
+
+/* ---------- themes ---------- */
+.between{--bg:#FBF4EA; --ink:#12323E; --ink-soft:#56686E; --accent:#176B67; --soft:#FCE3DA; --dot:#EF6F5A; --line:#E6DCCD}
+.between .label{color:#D4553F}
+.aqua{--bg:#3C6A9E; --ink:#F4F8FC; --ink-soft:#BCD3EA; --accent:#5CC2F7; --soft:#2F5A8A; --line:#6E95C2}
+.iris{--bg:#26282C; --ink:#F3F1EA; --ink-soft:#A9A69C; --accent:#F2C230; --soft:#36383D; --line:#45484E}
+.krishi{--bg:#EEF2DF; --ink:#1F3A24; --ink-soft:#56694F; --accent:#2F8F46; --soft:#DCE8C2; --dot:#E8892B; --line:#D3DDBA}
+.agri{--bg:#1D3A2A; --ink:#F1F5EA; --ink-soft:#A9C2AE; --accent:#B8DC6B; --soft:#284B37; --dot:#D9A441; --line:#3A5E48}
+.arogya{--bg:#EAF4F1; --ink:#14324A; --ink-soft:#557080; --accent:#1F8A84; --soft:#D3EAE4; --dot:#E2483D; --line:#CFE2DC}
+.saferx{--bg:#241F3D; --ink:#F3F0FA; --ink-soft:#ABA4CC; --accent:#FFB547; --soft:#322B52; --line:#45406A}
+</style>
+</head>
+<body>
+
+<!-- 01 Between Sessions -->
+<section class="cover between" id="between-sessions">
+  <span class="label">Health tech &middot; hackathon</span>
+  <h1>Between<b>Sessions</b></h1>
+  <p class="tag">Tame the loops. Master the moments between sessions.</p>
+  <ul class="chips"><li>AWS Lambda</li><li>AWS Cedar</li><li>RAG</li></ul>
+  <svg class="art" viewBox="0 0 600 480">
+    <circle cx="320" cy="250" r="215" fill="#E3F1EA"/>
+    <ellipse cx="320" cy="250" rx="250" ry="120" fill="none" stroke="#EF6F5A" stroke-width="4" transform="rotate(-18 320 250)"/>
+    <!-- puzzle tiles -->
+    <g transform="rotate(-6 320 110)">
+      <rect x="248" y="40" width="62" height="56" rx="14" fill="#12323E"/>
+      <rect x="326" y="40" width="62" height="56" rx="14" fill="#8ED1B8"/><circle cx="326" cy="68" r="11" fill="#E3F1EA"/>
+      <rect x="248" y="110" width="62" height="56" rx="14" fill="#F4B63A"/><circle cx="279" cy="110" r="11" fill="#E3F1EA"/>
+      <rect x="326" y="110" width="62" height="56" rx="14" fill="#EF6F5A"/><circle cx="326" cy="138" r="11" fill="#EF6F5A"/>
+    </g>
+    <g stroke-linecap="round" stroke-width="7"><path d="M205 70l22 18M196 118h26" stroke="#8ED1B8"/><path d="M438 64l-20 20M446 116h-26" stroke="#EF6F5A"/></g>
+    <!-- mascot: arms up -->
+    <g fill="none" stroke="#6CCBD3" stroke-width="52" stroke-linecap="round">
+      <path d="M232 380C178 330 182 238 238 214"/><path d="M408 380C462 330 458 238 402 214"/>
+    </g>
+    <rect x="200" y="350" width="240" height="110" rx="56" fill="#6CCBD3"/>
+    <circle cx="320" cy="320" r="104" fill="#7DD6DD"/>
+    <g fill="none" stroke="#12323E" stroke-width="7" stroke-linecap="round">
+      <path d="M266 304q14-16 28 0M346 304q14-16 28 0"/><path d="M296 342q24 22 48 0"/>
+    </g>
+    <ellipse cx="268" cy="336" rx="15" ry="9" fill="#F2A99A"/><ellipse cx="372" cy="336" rx="15" ry="9" fill="#F2A99A"/>
+  </svg>
+  <div class="foot"><span>Aadesh Deshmukh &middot; project showcase</span><span>01 / 07</span></div>
+</section>
+
+<!-- 02 AquaAgent -->
+<section class="cover aqua" id="aquaagent">
+  <svg class="grid" width="1200" height="900"><defs><pattern id="bp" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#4E7DB0" stroke-width="1"/></pattern></defs><rect width="1200" height="900" fill="url(#bp)"/><rect x="22" y="22" width="1156" height="856" fill="none" stroke="#7FA4CC" stroke-width="2"/></svg>
+  <span class="label">Water &middot; physics + ML</span>
+  <h1>Aqua<b>Agent</b></h1>
+  <p class="tag">Find the water nobody can see.</p>
+  <ul class="chips"><li>WNTR</li><li>SageMaker</li><li>Bedrock</li></ul>
+  <svg class="art" viewBox="0 0 600 480">
+    <!-- pipe network -->
+    <g stroke="#F4F8FC" stroke-width="6" stroke-linecap="round" fill="none">
+      <path d="M60 400H220V300H380V400H540"/><path d="M220 300V180H380V300"/><path d="M380 180H520V300"/><path d="M120 400V250H220"/>
+    </g>
+    <g fill="#3C6A9E" stroke="#F4F8FC" stroke-width="5">
+      <circle cx="60" cy="400" r="12"/><circle cx="220" cy="400" r="12"/><circle cx="220" cy="180" r="12"/><circle cx="380" cy="400" r="12"/>
+      <circle cx="520" cy="180" r="12"/><circle cx="540" cy="400" r="12"/><circle cx="120" cy="250" r="12"/>
+    </g>
+    <!-- sensors: 3 pressure (squares), 2 flow (diamonds) -->
+    <g fill="#5CC2F7"><rect x="206" y="286" width="28" height="28" rx="4"/><rect x="366" y="166" width="28" height="28" rx="4"/><rect x="106" y="386" width="28" height="28" rx="4"/>
+      <rect x="290" y="390" width="22" height="22" transform="rotate(45 301 401)"/><rect x="510" y="290" width="22" height="22" transform="rotate(45 521 301)"/></g>
+    <!-- hidden leak -->
+    <g fill="none" stroke="#FF8A78" stroke-width="4"><circle cx="380" cy="300" r="34"/><circle cx="380" cy="300" r="58" opacity=".55"/></g>
+    <circle cx="380" cy="300" r="16" fill="#FF8A78"/>
+    <!-- agent eye -->
+    <g transform="translate(470 40)">
+      <path d="M-24 52L-6 40M-24 52L-6 64M124 52L106 40M124 52L106 64" stroke="#F4F8FC" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="50" cy="52" r="56" fill="#3C6A9E" stroke="#F4F8FC" stroke-width="6"/>
+      <circle cx="50" cy="52" r="30" fill="none" stroke="#5CC2F7" stroke-width="6"/><circle cx="50" cy="52" r="20" fill="#5CC2F7"/><circle cx="43" cy="45" r="6" fill="#F4F8FC"/>
+      <path d="M50 -4V-22" stroke="#F4F8FC" stroke-width="5"/><circle cx="50" cy="-30" r="9" fill="none" stroke="#F4F8FC" stroke-width="5"/>
+    </g>
+    <path d="M440 120L400 262" stroke="#5CC2F7" stroke-width="4" stroke-dasharray="10 10"/>
+  </svg>
+  <div class="foot"><span>Aadesh Deshmukh &middot; project showcase</span><span>02 / 07</span></div>
+</section>
+
+<!-- 03 IRIS -->
+<section class="cover iris" id="iris">
+  <span class="label">Research &middot; computer vision</span>
+  <h1>IRIS<b>.</b></h1>
+  <p class="tag">Spotting road damage from the sky, then ranking what to fix first.</p>
+  <ul class="chips"><li>YOLOv11</li><li>UAV imagery</li><li>Knapsack</li></ul>
+  <svg class="art" viewBox="0 0 600 480">
+    <circle cx="320" cy="250" r="215" fill="#36383D"/>
+    <!-- road -->
+    <g transform="rotate(-24 300 290)">
+      <rect x="-40" y="210" width="700" height="170" fill="#4A4D53"/>
+      <path d="M-40 222H660M-40 368H660" stroke="#E9E6DC" stroke-width="6"/>
+      <path d="M-40 295H660" stroke="#F2C230" stroke-width="7" stroke-dasharray="36 28"/>
+      <path d="M120 250l18 14-10 16 22 12-6 18" fill="none" stroke="#1C1D20" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+      <ellipse cx="400" cy="335" rx="38" ry="20" fill="#1C1D20"/>
+      <path d="M470 240l14 10-4 14 16 10" fill="none" stroke="#1C1D20" stroke-width="5" stroke-linecap="round"/>
+      <!-- detections -->
+      <g fill="none" stroke="#F2C230" stroke-width="5"><rect x="104" y="238" width="66" height="84"/><rect x="350" y="304" width="100" height="62"/><rect x="456" y="228" width="50" height="58"/></g>
+      <g font-family="DM Mono" font-size="17" font-weight="500"><rect x="104" y="214" width="76" height="24" fill="#F2C230"/><text x="111" y="232" fill="#26282C">crack</text>
+        <rect x="350" y="280" width="92" height="24" fill="#F2C230"/><text x="357" y="298" fill="#26282C">pothole</text></g>
+    </g>
+    <!-- drone -->
+    <g transform="translate(410 70)">
+      <path d="M-50 -38L50 38M50 -38L-50 38" stroke="#F3F1EA" stroke-width="10" stroke-linecap="round"/>
+      <g fill="#26282C" stroke="#F3F1EA" stroke-width="5"><circle cx="-54" cy="-42" r="24"/><circle cx="54" cy="-42" r="24"/><circle cx="-54" cy="42" r="24"/><circle cx="54" cy="42" r="24"/></g>
+      <rect x="-24" y="-20" width="48" height="40" rx="12" fill="#F2C230"/><circle cx="0" cy="0" r="8" fill="#26282C"/>
+    </g>
+  </svg>
+  <div class="foot"><span>Aadesh Deshmukh &middot; project showcase</span><span>03 / 07</span></div>
+</section>
+
+<!-- 04 KrishiFlow -->
+<section class="cover krishi" id="krishiflow">
+  <span class="label">Agri-tech &middot; hackathon</span>
+  <h1>Krishi<b>Flow</b></h1>
+  <p class="tag">Smarter routes from farm to market, with prices you can plan around.</p>
+  <ul class="chips"><li>Vehicle routing</li><li>LSTM</li><li>React</li></ul>
+  <svg class="art" viewBox="0 0 600 480">
+    <circle cx="320" cy="250" r="215" fill="#DCE8C2"/>
+    <!-- fields -->
+    <g><rect x="110" y="120" width="120" height="90" rx="16" fill="#B5CF7E"/><rect x="250" y="250" width="110" height="100" rx="16" fill="#9DC06A"/>
+      <rect x="120" y="300" width="100" height="90" rx="16" fill="#C9DB95"/><rect x="380" y="320" width="120" height="80" rx="16" fill="#B5CF7E"/>
+      <path d="M120 140h100M120 160h100M120 180h100M260 270h90M260 290h90M260 310h90" stroke="#86AE55" stroke-width="5"/></g>
+    <!-- route -->
+    <path d="M170 165C210 230 170 300 170 345S280 330 305 300 380 230 420 250 470 330 440 360" fill="none" stroke="#E8892B" stroke-width="7" stroke-dasharray="16 12" stroke-linecap="round"/>
+    <g fill="#2F8F46" stroke="#EEF2DF" stroke-width="5"><circle cx="170" cy="165" r="16"/><circle cx="170" cy="345" r="16"/><circle cx="305" cy="300" r="16"/></g>
+    <!-- market -->
+    <g transform="translate(410 300)"><path d="M0 40V10L30-12 60 10v30z" fill="#1F3A24"/><rect x="20" y="18" width="20" height="22" fill="#E8892B"/></g>
+    <!-- truck -->
+    <g transform="translate(372 214) rotate(18)"><rect x="0" y="0" width="54" height="32" rx="5" fill="#E8892B"/><path d="M54 8h18l10 12v12H54z" fill="#1F3A24"/><circle cx="16" cy="36" r="9" fill="#1F3A24"/><circle cx="66" cy="36" r="9" fill="#1F3A24"/></g>
+    <!-- price forecast card -->
+    <g transform="translate(330 40)">
+      <rect width="230" height="140" rx="20" fill="#FBFCF4"/>
+      <text x="20" y="34" font-family="DM Mono" font-size="17" fill="#56694F">price forecast</text>
+      <path d="M20 112l34-20 30 10 34-34 26 12" fill="none" stroke="#2F8F46" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M144 80l26-18 40 6" fill="none" stroke="#E8892B" stroke-width="6" stroke-dasharray="10 9" stroke-linecap="round"/>
+    </g>
+  </svg>
+  <div class="foot"><span>Aadesh Deshmukh &middot; project showcase</span><span>04 / 07</span></div>
+</section>
+
+<!-- 05 AgriPhenotyper -->
+<section class="cover agri" id="agriphenotyper">
+  <span class="label">Research &middot; patent published</span>
+  <h1>Agri<b>Phenotyper</b></h1>
+  <p class="tag">Reading plant leaves one superpixel at a time to catch disease early.</p>
+  <ul class="chips"><li>SLIC</li><li>CNN + Transformer</li><li>Domain adaptation</li></ul>
+  <svg class="art" viewBox="0 0 600 480">
+    <circle cx="320" cy="250" r="215" fill="#284B37"/>
+    <defs><clipPath id="leaf"><path d="M90 400C110 180 300 70 540 60 520 300 340 430 90 400Z"/></clipPath></defs>
+    <g clip-path="url(#leaf)" stroke="#1D3A2A" stroke-width="3">
+      <polygon points="96,73 -1160,53 -1937,11 -470,-1466 104,66" fill="#4E8F4A"/>
+      <polygon points="202,-129 173,-7 127,75 104,66 -470,-1466 229,-2192 213,-353" fill="#5A9B50"/>
+      <polygon points="135,86 176,82 173,-7 127,75" fill="#478545"/>
+      <polygon points="202,-129 173,-7 176,82 183,87 228,66 230,63" fill="#62A356"/>
+      <polygon points="269,71 230,63 202,-129 213,-353 281,64" fill="#4E8F4A"/>
+      <polygon points="281,64 213,-353 229,-2192 373,-2355 397,-722 314,70" fill="#5A9B50"/>
+      <polygon points="365,62 319,76 314,70 397,-722 403,-596" fill="#478545"/>
+      <polygon points="442,-127 403,-596 365,62 367,64 419,70 421,67" fill="#62A356"/>
+      <polygon points="442,-127 421,67 467,75 477,11" fill="#4E8F4A"/>
+      <polygon points="504,90 519,74 477,11 467,75 472,83" fill="#5A9B50"/>
+      <polygon points="442,-127 403,-596 397,-722 373,-2355 500,-2511 2430,-168 519,74 477,11" fill="#478545"/>
+      <polygon points="77,116 -117,118 -1160,53 96,73" fill="#62A356"/>
+      <polygon points="85,120 77,116 96,73 104,66 127,75 135,86 129,119" fill="#4E8F4A"/>
+      <polygon points="136,131 180,130 190,118 183,87 176,82 135,86 129,119" fill="#5A9B50"/>
+      <polygon points="236,111 228,66 183,87 190,118 220,122" fill="#478545"/>
+      <polygon points="269,71 230,63 228,66 236,111 266,118 271,114" fill="#62A356"/>
+      <polygon points="319,76 314,70 281,64 269,71 271,114 319,104" fill="#4E8F4A"/>
+      <polygon points="374,112 367,64 365,62 319,76 319,104 327,115" fill="#5A9B50"/>
+      <polygon points="383,117 416,108 419,70 367,64 374,112" fill="#478545"/>
+      <polygon points="472,83 467,75 421,67 419,70 416,108 424,114 449,117" fill="#62A356"/>
+      <polygon points="504,110 462,129 449,117 472,83 504,90" fill="#4E8F4A"/>
+      <polygon points="504,110 510,119 812,139 1548,123 2615,49 2430,-168 519,74 504,90" fill="#5A9B50"/>
+      <polygon points="93,168 -117,118 77,116 85,120" fill="#478545"/>
+      <polygon points="98,174 133,151 136,131 129,119 85,120 93,168" fill="#62A356"/>
+      <polygon points="133,151 149,170 186,164 180,130 136,131" fill="#4E8F4A"/>
+      <polygon points="226,164 220,122 190,118 180,130 186,164 195,173" fill="#5A9B50"/>
+      <polygon points="236,168 272,167 266,118 236,111 220,122 226,164" fill="#478545"/>
+      <polygon points="327,115 319,104 271,114 266,118 272,167 279,172 315,163 323,153" fill="#62A356"/>
+      <polygon points="383,117 378,163 323,153 327,115 374,112" fill="#C9A23E" class="sick"/>
+      <polygon points="423,162 407,177 380,166 378,163 383,117 416,108 424,114" fill="#5A9B50"/>
+      <polygon points="462,129 472,164 423,162 424,114 449,117" fill="#478545"/>
+      <polygon points="504,110 510,119 507,161 472,164 472,164 462,129" fill="#62A356"/>
+      <polygon points="510,119 812,139 508,161 507,161" fill="#4E8F4A"/>
+      <polygon points="98,174 97,202 -2150,212 -1937,11 -1160,53 -117,118 93,168" fill="#5A9B50"/>
+      <polygon points="128,217 100,206 97,202 98,174 133,151 149,170 146,207" fill="#478545"/>
+      <polygon points="146,207 149,170 186,164 195,173 188,210 186,211" fill="#62A356"/>
+      <polygon points="217,219 188,210 195,173 226,164 236,168 228,213" fill="#4E8F4A"/>
+      <polygon points="278,189 262,216 228,213 236,168 272,167 279,172" fill="#5A9B50"/>
+      <polygon points="278,189 322,235 343,210 315,163 279,172" fill="#C9A23E" class="sick"/>
+      <polygon points="323,153 315,163 343,210 354,208 380,166 378,163" fill="#C9A23E" class="sick"/>
+      <polygon points="407,177 419,209 417,211 373,220 354,208 380,166" fill="#C9A23E" class="sick"/>
+      <polygon points="472,164 472,164 464,201 419,209 407,177 423,162" fill="#5A9B50"/>
+      <polygon points="472,164 464,201 473,212 504,218 517,208 508,161 507,161" fill="#478545"/>
+      <polygon points="508,161 517,208 637,222 1548,123 812,139" fill="#62A356"/>
+      <polygon points="100,206 74,259 -9,272 -2164,225 -2150,212 97,202" fill="#4E8F4A"/>
+      <polygon points="135,256 128,217 100,206 74,259 92,269 124,267" fill="#5A9B50"/>
+      <polygon points="178,267 186,211 146,207 128,217 135,256" fill="#478545"/>
+      <polygon points="217,219 188,210 186,211 178,267 180,270 225,248" fill="#62A356"/>
+      <polygon points="265,256 245,260 225,248 217,219 228,213 262,216 268,253" fill="#4E8F4A"/>
+      <polygon points="278,189 262,216 268,253 318,254 322,235" fill="#C9A23E" class="sick"/>
+      <polygon points="343,210 354,208 373,220 377,257 374,261 319,255 318,254 322,235" fill="#C9A23E" class="sick"/>
+      <polygon points="417,211 420,245 417,248 377,257 373,220" fill="#C9A23E" class="sick"/>
+      <polygon points="419,209 417,211 420,245 452,258 463,252 473,212 464,201" fill="#4E8F4A"/>
+      <polygon points="473,212 463,252 510,267 504,218" fill="#5A9B50"/>
+      <polygon points="504,218 517,208 637,222 510,267 510,267" fill="#478545"/>
+      <polygon points="92,269 91,314 -9,272 74,259" fill="#62A356"/>
+      <polygon points="129,301 97,322 91,314 92,269 124,267" fill="#4E8F4A"/>
+      <polygon points="185,290 180,270 178,267 135,256 124,267 129,301 153,313" fill="#5A9B50"/>
+      <polygon points="185,290 180,270 225,248 245,260 221,304 202,302" fill="#478545"/>
+      <polygon points="265,256 272,305 232,314 221,304 245,260" fill="#62A356"/>
+      <polygon points="321,304 284,312 272,305 265,256 268,253 318,254 319,255" fill="#4E8F4A"/>
+      <polygon points="322,304 354,310 380,295 374,261 319,255 321,304" fill="#5A9B50"/>
+      <polygon points="380,295 410,306 417,248 377,257 374,261" fill="#478545"/>
+      <polygon points="417,248 420,245 452,258 453,305 414,310 410,306" fill="#62A356"/>
+      <polygon points="463,252 452,258 453,305 455,306 505,304 507,302 510,267 510,267" fill="#4E8F4A"/>
+      <polygon points="637,222 1548,123 2615,49 3033,500 2857,660 507,302 510,267" fill="#5A9B50"/>
+      <polygon points="81,351 -1563,554 -2297,635 -2472,500 -2164,225 -9,272 91,314 97,322 96,337" fill="#478545"/>
+      <polygon points="153,313 129,301 97,322 96,337 129,350 152,334" fill="#62A356"/>
+      <polygon points="185,290 153,313 152,334 184,356 202,302" fill="#4E8F4A"/>
+      <polygon points="202,302 221,304 232,314 237,347 229,365 185,357 184,356" fill="#5A9B50"/>
+      <polygon points="237,347 232,314 272,305 284,312 277,343" fill="#478545"/>
+      <polygon points="322,304 320,351 286,356 277,343 284,312 321,304" fill="#62A356"/>
+      <polygon points="322,304 320,351 327,360 370,354 354,310" fill="#4E8F4A"/>
+      <polygon points="354,310 370,354 373,356 404,352 414,310 410,306 380,295" fill="#5A9B50"/>
+      <polygon points="460,358 460,357 455,306 453,305 414,310 404,352 407,356" fill="#478545"/>
+      <polygon points="505,304 455,306 460,357 506,340" fill="#62A356"/>
+      <polygon points="508,342 506,340 505,304 507,302 2857,660 2645,855 620,394" fill="#4E8F4A"/>
+      <polygon points="81,351 -1563,554 94,404 99,393" fill="#5A9B50"/>
+      <polygon points="129,350 96,337 81,351 99,393 137,382" fill="#478545"/>
+      <polygon points="184,356 185,357 166,392 156,395 137,382 129,350 152,334" fill="#62A356"/>
+      <polygon points="229,365 185,357 166,392 194,409 235,387 236,385" fill="#4E8F4A"/>
+      <polygon points="279,381 286,356 277,343 237,347 229,365 236,385 275,383" fill="#5A9B50"/>
+      <polygon points="279,381 286,356 320,351 327,360 324,388 314,397" fill="#478545"/>
+      <polygon points="364,399 373,356 370,354 327,360 324,388" fill="#62A356"/>
+      <polygon points="414,394 407,356 404,352 373,356 364,399 364,400 404,404" fill="#4E8F4A"/>
+      <polygon points="451,403 467,390 460,358 407,356 414,394" fill="#5A9B50"/>
+      <polygon points="460,358 460,357 506,340 508,342 498,391 490,395 467,390" fill="#478545"/>
+      <polygon points="508,342 498,391 620,394" fill="#62A356"/>
+      <polygon points="126,476 134,2598 -2297,635 -1563,554 94,404" fill="#4E8F4A"/>
+      <polygon points="137,382 99,393 94,404 126,476 156,395" fill="#5A9B50"/>
+      <polygon points="166,392 194,409 297,1002 351,2727 351,2781 134,2598 126,476 156,395" fill="#478545"/>
+      <polygon points="290,593 299,725 297,1002 194,409 235,387 281,550" fill="#62A356"/>
+      <polygon points="281,550 235,387 236,385 275,383" fill="#4E8F4A"/>
+      <polygon points="290,593 314,397 279,381 275,383 281,550" fill="#5A9B50"/>
+      <polygon points="290,593 299,725 364,400 364,399 324,388 314,397" fill="#478545"/>
+      <polygon points="383,1774 351,2727 297,1002 299,725 364,400 404,404" fill="#62A356"/>
+      <polygon points="451,403 414,394 404,404 383,1774" fill="#4E8F4A"/>
+      <polygon points="451,403 467,390 490,395 992,2442 500,2924 351,2781 351,2727 383,1774" fill="#5A9B50"/>
+      <polygon points="620,394 2645,855 992,2442 490,395 498,391" fill="#478545"/>
+    </g>
+    <path d="M90 400C220 300 380 170 540 60" fill="none" stroke="#1D3A2A" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="330" cy="200" r="88" fill="none" stroke="#B8DC6B" stroke-width="6" stroke-dasharray="14 10"/>
+    <!-- tokens -->
+    <g transform="translate(70 40)"><g fill="#B8DC6B"><rect width="34" height="34" rx="8"/><rect x="44" width="34" height="34" rx="8" fill="#D9A441"/><rect x="88" width="34" height="34" rx="8"/><rect x="132" width="34" height="34" rx="8" fill="#D9A441"/></g>
+      <text x="0" y="66" font-family="DM Mono" font-size="17" fill="#A9C2AE">superpixel tokens</text></g>
+  </svg>
+  <div class="foot"><span>Aadesh Deshmukh &middot; project showcase</span><span>05 / 07</span></div>
+</section>
+
+<!-- 06 ArogyaScript -->
+<section class="cover arogya" id="arogyascript">
+  <span class="label">Health tech &middot; hackathon</span>
+  <h1>Arogya<b>Script</b></h1>
+  <p class="tag">Turning handwritten prescriptions into records you can trust.</p>
+  <ul class="chips"><li>YOLOv8</li><li>OCR</li><li>Risk scoring</li></ul>
+  <svg class="art" viewBox="0 0 600 480">
+    <circle cx="320" cy="250" r="215" fill="#D3EAE4"/>
+    <!-- prescription -->
+    <g transform="rotate(-7 200 250)">
+      <rect x="90" y="70" width="220" height="300" rx="18" fill="#FFFFFF"/>
+      <text x="114" y="136" font-family="Bricolage Grotesque" font-weight="800" font-size="54" fill="#14324A">Rx</text>
+      <g fill="none" stroke="#14324A" stroke-width="5" stroke-linecap="round"><path d="M116 182c14-10 26 8 40-2s24 6 40-4 26 4 44-2 20 6 30 0"/><path d="M116 236c16-8 28 6 44-2s26 6 42-2 24 4 40-2"/><path d="M116 290c16-8 26 6 42 0s22 4 38-2"/></g>
+      <g fill="none" stroke="#E2483D" stroke-width="4" stroke-dasharray="10 7"><rect x="106" y="166" width="190" height="34"/><rect x="106" y="220" width="176" height="34"/><rect x="106" y="274" width="140" height="34"/></g>
+    </g>
+    <path d="M330 230h50" stroke="#1F8A84" stroke-width="7" stroke-linecap="round"/><path d="M370 214l18 16-18 16" fill="none" stroke="#1F8A84" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- structured record -->
+    <g transform="translate(400 110)">
+      <rect width="170" height="230" rx="18" fill="#14324A"/>
+      <g fill="#1F8A84"><rect x="18" y="26" width="26" height="26" rx="13"/><rect x="18" y="76" width="26" height="26" rx="13"/><rect x="18" y="126" width="26" height="26" rx="13"/></g>
+      <g fill="#D3EAE4"><rect x="56" y="30" width="92" height="8" rx="4"/><rect x="56" y="44" width="60" height="6" rx="3" opacity=".6"/><rect x="56" y="80" width="80" height="8" rx="4"/><rect x="56" y="94" width="70" height="6" rx="3" opacity=".6"/><rect x="56" y="130" width="96" height="8" rx="4"/><rect x="56" y="144" width="50" height="6" rx="3" opacity=".6"/></g>
+      <path d="M40 210a45 45 0 0 1 90 0" fill="none" stroke="#2C4D66" stroke-width="12" stroke-linecap="round"/>
+      <path d="M40 210a45 45 0 0 1 64-41" fill="none" stroke="#E2483D" stroke-width="12" stroke-linecap="round"/>
+      <path d="M85 210l22-26" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+    </g>
+  </svg>
+  <div class="foot"><span>Aadesh Deshmukh &middot; project showcase</span><span>06 / 07</span></div>
+</section>
+
+<!-- 07 SafeRx -->
+<section class="cover saferx" id="saferx">
+  <span class="label">Health tech &middot; buildathon</span>
+  <h1>Safe<b>Rx</b></h1>
+  <p class="tag">Catching prescription misuse before it slips through.</p>
+  <ul class="chips"><li>Anomaly detection</li><li>UPID</li><li>Rules engine</li></ul>
+  <svg class="art" viewBox="0 0 600 480">
+    <circle cx="320" cy="250" r="215" fill="#322B52"/>
+    <!-- prescription records -->
+    <g font-family="DM Mono" font-size="17" font-weight="500">
+      <g transform="translate(110 110)"><rect width="250" height="52" rx="12" fill="#3E3766"/><text x="20" y="32" fill="#C9C3E6">UPID-0417</text><rect x="150" y="20" width="80" height="12" rx="6" fill="#5A5390"/></g>
+      <g transform="translate(110 176)"><rect width="250" height="52" rx="12" fill="#3E3766"/><text x="20" y="32" fill="#C9C3E6">UPID-0417</text><rect x="150" y="20" width="60" height="12" rx="6" fill="#5A5390"/></g>
+      <g transform="translate(110 242)"><rect width="250" height="52" rx="12" fill="#FFB547"/><text x="20" y="32" fill="#241F3D">UPID-0417</text><rect x="150" y="20" width="76" height="12" rx="6" fill="#241F3D" opacity=".35"/></g>
+      <g transform="translate(110 308)"><rect width="250" height="52" rx="12" fill="#3E3766"/><text x="20" y="32" fill="#C9C3E6">UPID-0982</text><rect x="150" y="20" width="70" height="12" rx="6" fill="#5A5390"/></g>
+    </g>
+    <!-- flag on the anomalous row -->
+    <g transform="translate(372 236)"><path d="M6 0v66" stroke="#F3F0FA" stroke-width="6" stroke-linecap="round"/><path d="M8 4h44l-12 14 12 14H8z" fill="#FFB547"/></g>
+    <!-- shield -->
+    <g transform="translate(440 120)">
+      <path d="M60 0l60 22v52c0 46-26 80-60 98C26 154 0 120 0 74V22z" fill="#F3F0FA"/>
+      <text x="60" y="104" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="56" fill="#241F3D">Rx</text>
+      <circle cx="104" cy="150" r="22" fill="#FFB547"/><path d="M104 138v14M104 158v2" stroke="#241F3D" stroke-width="6" stroke-linecap="round"/>
+    </g>
+    <path d="M360 268C400 268 410 220 438 214" fill="none" stroke="#FFB547" stroke-width="5" stroke-dasharray="10 9" stroke-linecap="round"/>
+  </svg>
+  <div class="foot"><span>Aadesh Deshmukh &middot; project showcase</span><span>07 / 07</span></div>
+</section>
+
+<script>
+const p=new URLSearchParams(location.search).get('p');
+if(p){document.body.classList.add('one'); const el=document.getElementById(p); el&&el.classList.add('on')}
+</script>
+</body>
+</html>

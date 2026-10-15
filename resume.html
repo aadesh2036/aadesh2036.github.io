@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Resume · Aadesh Deshmukh</title>
+<meta name="description" content="Resume of Aadesh Deshmukh — Computer Science student at VIT Pune working across software engineering and AI.">
+<link rel="icon" href="assets/mini.webp" type="image/webp">
+<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(_){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css?v=8">
+<script src="js/data.js?v=8" defer></script>
+<script src="js/site.js?v=8" defer></script>
+</head>
+<body data-page="resume">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/></symbol>
+  <symbol id="ptr" viewBox="0 0 32 32"><path d="M5 3v21.5l5.8-5.4 4 8.6 4.2-1.9-4-8.4 7.9-.6z"/></symbol>
+</svg>
+
+<header class="navbar">
+  <ul class="nav" id="nav">
+    <span class="pill" aria-hidden="true"></span>
+    <li><a href="index.html#home" data-sec="home" data-cursor="home">Home</a></li>
+    <li><a href="index.html#about" data-sec="about" data-cursor="hi">About<span class="me"> Me</span></a></li>
+    <li><a href="projects.html" data-sec="projects" data-cursor="work">Projects</a></li>
+    <li><a href="resume.html" data-sec="resume" data-cursor="cv">Resume</a></li>
+  </ul>
+  <button class="mode" id="theme" type="button" aria-label="Switch light or dark theme" data-cursor="flip"><span></span></button>
+</header>
+
+<main>
+  <section class="sec page-top wrap">
+    <div class="res-top">
+      <div>
+        <p class="eyebrow">Curriculum vitae</p>
+        <h1 class="head">my <b>resume</b></h1>
+      </div>
+      <div class="res-actions">
+        <span class="stamp">Updated October 2026</span>
+        <button class="btn" id="print" type="button" data-cursor="print">Print</button>
+        <a class="btn solid" data-pdf href="#" target="_blank" rel="noopener" data-cursor="pdf" hidden>Download PDF</a>
+      </div>
+    </div>
+
+    <article class="sheet rv" id="sheet">
+      <div class="rail" aria-hidden="true"><span></span></div>
+
+      <header class="cv-head">
+        <!-- Profile photo: swap assets/profile.webp (or set SITE.profilePhoto in js/data.js) -->
+        <div class="photo has" id="photo"><img src="assets/profile.webp" alt="Aadesh Deshmukh" width="136" height="136"></div>
+        <div class="cv-id">
+          <h2>Aadesh Deshmukh</h2>
+          <p class="cv-role">Software engineering + AI &middot; B.Tech CSE (Data Science), VIT Pune</p>
+          <ul class="cv-contact">
+            <li><a data-email="text" href="mailto:aadeshmukh236@gmail.com" data-cursor="copy + mail">aadeshmukh236@gmail.com</a></li>
+            <li><a data-link="github" href="https://github.com/aadesh2036" target="_blank" rel="noopener" data-cursor="github">github.com/aadesh2036</a></li>
+            <li><a data-link="linkedin" href="https://www.linkedin.com/in/aadesh-deshmukh-988a01330" target="_blank" rel="noopener" data-cursor="linkedin">LinkedIn</a></li>
+            <li>Pune, India</li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="block">
+        <h3>Summary</h3>
+        <p class="summary">Computer Science (Data Science) undergraduate at VIT Pune (CGPA 9.29/10) who cares most about building software that holds up. Built a full-stack serverless application on AWS (Lambda, API Gateway, DynamoDB, SAM) that scored 28/30 at the WeMakeDevs First Commit Hackathon, and engineered a 51K-image ML data pipeline for a research team. Strong in data structures, algorithms and OOP (Python, C++, JavaScript); used to owning problems end to end and making evidence-backed decisions under real constraints.</p>
+      </section>
+
+      <section class="block">
+        <h3>Skills</h3>
+        <div class="items">
+          <div class="skillrow"><span class="when">Languages</span><ul class="chips"><li>Python</li><li>C++</li><li>JavaScript (ES6+)</li><li>SQL</li></ul></div>
+          <div class="skillrow"><span class="when">Cloud &amp; backend</span><ul class="chips"><li>AWS Lambda</li><li>API Gateway</li><li>DynamoDB</li><li>AWS SAM</li><li>Node.js</li><li>REST APIs</li><li>Serverless</li><li>AWS Cedar</li></ul></div>
+          <div class="skillrow"><span class="when">Frontend</span><ul class="chips"><li>React</li><li>Vite</li><li>Tailwind CSS</li><li>Accessible UI</li></ul></div>
+          <div class="skillrow"><span class="when">Fundamentals</span><ul class="chips"><li>DSA (115+ LeetCode)</li><li>OOP</li><li>Git / GitHub</li><li>Code review</li><li>Automated testing</li><li>Agile</li></ul></div>
+          <div class="skillrow"><span class="when">AI / ML &amp; data</span><ul class="chips"><li>PyTorch</li><li>YOLOv8 / v11</li><li>RAG</li><li>Hugging Face LLMs</li><li>scikit-learn</li><li>OpenCV</li><li>Pandas</li><li>NumPy</li><li>ETL pipelines</li><li>Streamlit</li></ul></div>
+        </div>
+      </section>
+
+      <section class="block">
+        <h3>Projects</h3>
+        <ol class="items">
+          <li class="item"><span class="when">2026</span><div>
+            <h4><a href="https://github.com/aadesh2036/Between_Sessions" target="_blank" rel="noopener" data-cursor="repo">Between Sessions</a>: serverless care-continuity platform for OCD therapy</h4>
+            <p class="where">WeMakeDevs First Commit Hackathon &middot; React, Node.js, AWS Lambda, API Gateway, DynamoDB, AWS SAM, AWS Cedar</p>
+            <ul class="bullets">
+              <li>Built a full-stack platform where OCD patients log distress and exposure practice between therapy sessions and clinicians get objective longitudinal visibility, designed around trust: privacy-first, safety-first, no gamification.</li>
+              <li>Architected a serverless backend on AWS SAM: 13 decoupled Lambda functions behind API Gateway with a single-table, pay-per-request DynamoDB design; runs locally with cloud parity via SAM CLI.</li>
+              <li>Implemented consent-based access control with AWS Cedar (WASM) policies, so clinicians see only the data categories a patient has shared; revoking consent immediately returns 403 on protected endpoints.</li>
+              <li>Built a RAG pipeline (Qwen2.5-7B via Hugging Face) that turns patient logs into clinician summaries grounded in ERP literature, with a deterministic fallback when the model is unreachable.</li>
+              <li>Wrote end-to-end suites for auth, security, AI/RAG and user journeys (83/83 checks passing) and built the responsive React + Tailwind frontend.</li>
+            </ul>
+            <span class="metric">Scored 28 / 30</span></div></li>
+          <li class="item"><span class="when">2026</span><div>
+            <h4><a href="https://github.com/aadesh2036/AquaAgent" target="_blank" rel="noopener" data-cursor="repo">AquaAgent</a>: hidden-leak detection for water networks</h4>
+            <p class="where">WNTR, SageMaker, Bedrock, FastAPI, React</p>
+            <ul class="bullets">
+              <li>Physics-grounded leak detection for a water network watched by only 3 pressure and 2 flow sensors: WNTR simulation, a SageMaker-trained hidden-state predictor, residual-based detection and localisation, and a Bedrock agent that explains the evidence without inventing numbers.</li>
+            </ul></div></li>
+          <li class="item"><span class="when">Hackathon</span><div>
+            <h4>ArogyaScript: AI prescription intelligence system</h4>
+            <ul class="bullets">
+              <li>Designed an end-to-end pipeline (YOLOv8 + OCR) that extracts structured records from unstructured prescription images, feeding a risk-scoring engine and an analytics dashboard for non-technical stakeholders.</li>
+            </ul></div></li>
+          <li class="item"><span class="when">Buildathon</span><div>
+            <h4>SafeRx: prescription verification system</h4>
+            <p class="where">OpenAI x NxtWave Buildathon</p>
+            <ul class="bullets">
+              <li>Designed a rule-based anomaly-detection system using a Unified Prescription ID (UPID) to flag prescription misuse patterns in structured data.</li>
+            </ul></div></li>
+        </ol>
+      </section>
+
+      <section class="block">
+        <h3>Research</h3>
+        <ol class="items">
+          <li class="item"><span class="when">Ongoing</span><div>
+            <h4>IRIS: UAV road defect detection</h4>
+            <p class="where">VIT Pune &middot; Prof. Sayali Shinde &middot; Python, PyTorch, YOLOv11, OpenCV</p>
+            <ul class="bullets">
+              <li>Coordinated a 4-person team building a data pipeline that fuses and cleans a 51K-image, 5-class Indian road-damage dataset for a YOLOv11s detector, managing ingestion, preprocessing and storage under GPU and disk constraints.</li>
+              <li>Ran a 9-technique preprocessing ablation study, identifying bilateral filtering (d=5, &sigma;=75) as the top performer and quantifying batch-normalisation convergence invariance.</li>
+              <li>Built a cost-analysis module (IRC severity grading + knapsack optimisation) that turns detections into a repair-priority metric, plus MiDaS depth estimation for volume estimates; collaborating on an IEEE Transactions on Intelligent Transportation Systems submission.</li>
+            </ul></div></li>
+          <li class="item"><span class="when">Patent published</span><div>
+            <h4>AgriPhenotyper: AI crop disease phenotyping system</h4>
+            <ul class="bullets">
+              <li>Built an image-segmentation pipeline that quantifies plant-disease severity from field images at scale, with trend monitoring across large multi-field datasets; presented at Kisan AgriShow.</li>
+              <li>Patent: &ldquo;Agri-Phenotyper: An Integrated Lightweight AI System for Field Crop Phenotyping.&rdquo;</li>
+            </ul></div></li>
+        </ol>
+      </section>
+
+      <section class="block">
+        <h3>Education</h3>
+        <ol class="items">
+          <li class="item"><span class="when">2024 &ndash; 2028</span><div>
+            <h4>B.Tech, Computer Science Engineering (Data Science)</h4>
+            <p class="where">Vishwakarma Institute of Technology (VIT), Pune</p>
+            <span class="metric">CGPA 9.29 / 10</span></div></li>
+          <li class="item"><span class="when">2023 &ndash; 2024</span><div>
+            <h4>HSC, Science</h4>
+            <p class="where">Saraswati Vidyalaya &amp; Junior College, Arjuni Morgaon</p>
+            <span class="metric">97.5%</span></div></li>
+        </ol>
+      </section>
+
+      <section class="block">
+        <h3>Leadership &amp; achievements</h3>
+        <ol class="items">
+          <li class="item"><span class="when">Aug 2025 &ndash; May 2026</span><div>
+            <h4>Creatives &amp; Production Head</h4>
+            <p class="where">TEDxVITPune</p>
+            <ul class="bullets"><li>Led multimedia production for large-scale university events, coordinating cross-functional teams under fixed deadlines.</li></ul></div></li>
+          <li class="item"><span class="when">Hackathons</span><div>
+            <ul class="bullets">
+              <li>WeMakeDevs First Commit Hackathon: scored 28/30</li>
+              <li>National-level hackathon participant, Symbiosis University of Applied Sciences</li>
+              <li>OpenAI x NxtWave Buildathon participant</li>
+            </ul></div></li>
+        </ol>
+      </section>
+    </article>
+  </section>
+
+  <section class="contact wrap">
+    <div class="foot"><span>Aadesh Deshmukh &middot; Pune, India</span><a href="projects.html" data-cursor="work">see the project gallery &rarr;</a></div>
+  </section>
+</main>
+
+<div id="fx" aria-hidden="true">
+  <div id="ring"><span id="ringTxt"></span></div>
+  <div id="cur"><svg viewBox="0 0 32 32"><use class="sh" href="#ptr" x="2.2" y="2.2"/><use class="ar" href="#ptr"/></svg></div>
+</div>
+
+</body>
+</html>
